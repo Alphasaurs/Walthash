@@ -20,4 +20,6 @@ function cool_files(){
 add_action("wp_enqueue_scripts","cool_files");//wp_enqueue_scripts is action hooks
 
 ?>
+b.after this add <?php wp_head(); ?> in header.php and delete all previous link
+c.after this add <?php wp_footer(); ?> in footer.php and delete all previous link
 
