@@ -17,7 +17,7 @@ function cool_files(){
 
 }
 
-add_action("wp_enqueue_scripts","cool_files");
+add_action("wp_enqueue_scripts","cool_files");//wp_enqueue_scripts is action hooks
 
 ?>
 
