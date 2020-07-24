@@ -1,0 +1,23 @@
+****************inside function.php************
+function cool_menu(){
+    
+    register_nav_menus(
+        array(
+            'primary-menu'=> __('Primary Menu'),
+            'footer-menu'=> __('Footer Menu')
+        )
+        );
+}
+
+add_action("init","cool_menu");
+
+*******************inside index.php*****************
+search menu tab delete all under <ul> tag
+     <?php
+ wp_nav_menu(array(
+   'menu' => 'primary-menu',
+   'container' =>'',
+   'items_wrap' => '<ul class="active drop-down headerMenu">%3$s</ul>'
+ ));
+
+?>
