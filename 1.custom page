@@ -31,3 +31,8 @@ a.inside page.php
 </div>
 <?php get_footer(); ?>
 
+
+OR
+use echo get_the_permalink();
+    echo get_the_title();
+
