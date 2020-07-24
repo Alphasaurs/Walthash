@@ -1,5 +1,18 @@
 1.<?php echo get_bloginfo('name') ?>
-2.<?php echo get_bloginfo('description') ?>
-3.<?php echo get_bloginfo('template_url') ?>
-4.<?php get_header(); ?>
-5.<?php get_footer(); ?>
+2.attaching all files to wordpress easy method but no official method
+a.<?php echo get_bloginfo('description') ?>
+b.<?php echo get_bloginfo('template_url') ?>
+c.<?php get_header(); ?>
+d.<?php get_footer(); ?>
+
+3.attaching all files to wordpress easy method but official method--action hooks
+a.inside function.php
+function cool_files(){
+     //stylesheets
+    wp_enqueue_style('coolmn', get_stylesheet_uri());
+    wp_enqueue_style('cool', get_template_directory_uri() . '/assets/css/style.css') ; 
+    //scripts
+    wp_enqueue_scripts('coolscrpt', get_template_directory_uri() .'/assets/js/main.js', array(), '1.1', true);
+
+}
+
